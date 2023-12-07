@@ -27,6 +27,14 @@ function output(){
     document.querySelector(".line").classList.remove("margin");
     document.querySelector(".arrow").classList.remove("margin");
     document.querySelector(".bottom-section").classList.remove("invisible");
+    document.querySelector(".day").classList.remove("errorState");
+    document.querySelector(".month").classList.remove("errorState");
+    document.querySelector(".year").classList.remove("errorState");
+
+    var inputp= document.querySelectorAll(".inputp");
+    for (let i = 0; i < inputp.length; i++) {
+        inputp[i].classList.remove("error");
+    }
     
     dayInput= Number(document.querySelector(".day").value);
     monthInput= Number(document.querySelector(".month").value);
@@ -123,6 +131,13 @@ function incorrect(){
     document.querySelector(".yearOutput").textContent= "--";
     document.querySelector(".monthOutput").textContent= "--";
     document.querySelector(".dayOutput").textContent= "--";
+    document.querySelector(".day").classList.add("errorState");
+    document.querySelector(".month").classList.add("errorState");
+    document.querySelector(".year").classList.add("errorState");
+    var inputp= document.querySelectorAll(".inputp");
+    for (let i = 0; i < inputp.length; i++) {
+        inputp[i].classList.add("error");
+    }
 }
 
 function validDay(day){
