@@ -26,6 +26,8 @@
     height: fit-content;
 }
 
+/*Top-Section*/
+
 .inputp{
     font-family: 'Poppins', sans-serif;
     color:  hsl(0, 1%, 44%);
@@ -90,7 +92,7 @@ input[type='text']{
     display: none;
 }
 
-#error{
+.errorState{
     border-color: hsl(0, 100%, 67%);
     outline-color: hsl(0, 100%, 67%);
 }
@@ -150,6 +152,8 @@ input[type='text']{
     background-color: hsl(0, 0%, 8%);
 }
 
+/*Bottom-Section*/
+
 .bottom-section{
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
@@ -168,6 +172,8 @@ input[type='text']{
 #output{
     color: hsl(259, 100%, 65%);
 }
+
+/*Media Queries*/
 
 @media screen  and (max-width: 750px){
     .main-container{
