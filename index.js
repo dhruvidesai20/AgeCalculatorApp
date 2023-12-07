@@ -141,7 +141,9 @@ function incorrect(){
 }
 
 function validDay(day){
-    if(yearInput==currentYear && monthInput==currentMonth){
+    if(notDecimal(day)==false){
+        return false;
+    }else if(yearInput==currentYear && monthInput==currentMonth){
         if(day>=1 && day<=currentDay){
             return true;
         }else{
@@ -187,7 +189,9 @@ function validDay(day){
 }
 
 function validMonth(month){
-    if(yearInput==currentYear){
+    if(notDecimal(month)==false){
+        return false;
+    }else if(yearInput==currentYear){
         if(month<=currentMonth){
             return true;
         }else{
@@ -203,7 +207,17 @@ function validMonth(month){
 }
 
 function validYear(year){
-    if(year<=currentYear && year>=0){
+    if(notDecimal(year)==false){
+        return false;
+    }else if(year<=currentYear && year>=0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function notDecimal(value){
+    if(Math.floor(value)==value){
         return true;
     }else{
         return false;
